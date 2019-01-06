@@ -32,6 +32,26 @@ public abstract class BaseDAO {
 				baseDAO = GoodsDAO.getInstance();
 			}
 			break;
+		case SupplierDAO:
+			if (baseDAO == null || baseDAO.getClass() != SupplierDAO.class) {
+				baseDAO = SupplierDAO.getInstance();
+			}
+			break;
+		case ShelfDAO:
+			if (baseDAO == null || baseDAO.getClass() != ShelfDAO.class) {
+				baseDAO = ShelfDAO.getInstance();
+			}
+			break;
+		case SupplyDAO:
+			if (baseDAO == null || baseDAO.getClass() != SupplyDAO.class) {
+				baseDAO = SupplyDAO.getInstance();
+			}
+			break;
+		case OnsaleDAO:
+			if (baseDAO == null || baseDAO.getClass() != OnsaleDAO.class) {
+				baseDAO = OnsaleDAO.getInstance();
+			}
+			break;
 		default:
 			break;
 		}

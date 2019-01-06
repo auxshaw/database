@@ -2,24 +2,24 @@ package model;
 
 public class Supply {
 
-	private int goodsid;
-	private int supplierid;
+	private String goodsid;
+	private String supplierid;
 	
 	//g_id
-	public int getGoodsid() {
+	public String getGoodsid() {
 		return goodsid;
 	}
  
-	public void setGoodsid(int goodsid) {
+	public void setGoodsid(String goodsid) {
 		this.goodsid = goodsid;
 	}
 	
 	//s_id
-	public int getSupplierid() {
+	public String getSupplierid() {
 		return supplierid;
 	}
  
-	public void setSupplierid(int supplierid) {
+	public void setSupplierid(String supplierid) {
 		this.supplierid = supplierid;
 	}
 }

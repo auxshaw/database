@@ -1,10 +1,9 @@
 package model;
 
 import java.math.BigDecimal;
-import java.sql.Date;
 
 public class Goods {
-	private int goodsid;
+	private String goodsid;
 	private String goodsname;
 	private String goodstype;
 	private BigDecimal price;
@@ -12,11 +11,11 @@ public class Goods {
 	private int stocksize;
 	
 	//id
-	public int getGoodsid() {
+	public String getGoodsid() {
 		return goodsid;
 	}
  
-	public void setGoodsid(int goodsid) {
+	public void setGoodsid(String goodsid) {
 		this.goodsid = goodsid;
 	}
  

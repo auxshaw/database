@@ -1,5 +1,5 @@
 package base;
 
 public enum DAO {
-	UserDAO,GoodsDAO;
+	UserDAO,GoodsDAO,SupplierDAO,ShelfDAO,SupplyDAO,OnsaleDAO;
 }

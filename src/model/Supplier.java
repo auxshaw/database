@@ -2,17 +2,17 @@ package model;
 
 public class Supplier {
 
-	private int supplierid;
+	private String supplierid;
 	private String suppliername;
 	private String address;
-	private int telephone;
+	private String telephone;
 	
 	//id
-	public int getSupplierid() {
+	public String getSupplierid() {
 		return supplierid;
 	}
  
-	public void setSupplierid(int supplierid) {
+	public void setSupplierid(String supplierid) {
 		this.supplierid = supplierid;
 	}
 	
@@ -35,11 +35,11 @@ public class Supplier {
 	}
 	
 	//telephone
-	public int getTelephone() {
+	public String getTelephone() {
 		return telephone;
 	}
  
-	public void setTelephone(int telephone) {
+	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
 	

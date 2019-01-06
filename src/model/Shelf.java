@@ -2,15 +2,15 @@ package model;
 
 public class Shelf {
 
-	private int shelfid;
+	private String shelfid;
 	private String shelflocation;
 	
 	//id
-	public int getShelfid() {
+	public String getShelfid() {
 		return shelfid;
 	}
 	 
-	public void setShelfid(int shelfid) {
+	public void setShelfid(String shelfid) {
 		this.shelfid = shelfid;
 	}
 		

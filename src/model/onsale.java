@@ -1,26 +1,26 @@
 package model;
 
-public class onsale {
+public class Onsale {
 
-	private int shelfid;
-	private int goodsid;
+	private String shelfid;
+	private String goodsid;
 	private String goodslocation;
 	
 	//id
-	public int getShelfid() {
+	public String getShelfid() {
 		return shelfid;
 	}
 	 
-	public void setShelfid(int shelfid) {
+	public void setShelfid(String shelfid) {
 		this.shelfid = shelfid;
 	}
 	
 	//id
-	public int getGoodsid() {
+	public String getGoodsid() {
 		return goodsid;
 	}
  
-	public void setGoodsid(int goodsid) {
+	public void setGoodsid(String goodsid) {
 		this.goodsid = goodsid;
 	}
 	
