@@ -155,16 +155,36 @@ public class GoodsDAO extends BaseDAO{
 		return result;
 		}
 
+	// querygoods-shelf
+	public List<Goods> querygsh() {
+		List<Goods> result = new ArrayList<Goods>();
+
+		String sql = "select goods.goodsid,goodsname,goodslocation from goods,onsale where goods.goodsid=onsale.goodsid";
+		rs = db.executeQuery(sql);
+		try {
+			while (rs.next()) {
+				Goods go =new Goods();
+				go.setGoodsid(rs.getString("goodsid"));
+				go.setGoodsname(rs.getString("goodsname"));
+				go.setGoodslocation(rs.getString("goodslocation"));
+				result.add(go);
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			destroy();
+		}
+ 
+		return result;
+	}
+	
+	
 	// queryAll
 	public List<Goods> queryAll() {
 		List<Goods> result = new ArrayList<Goods>();
-//		if (pageNum < 1) {
-//			return result;
-//		}
-		
-//		int beginNum = (pageNum - 1) * showNum;
+
 		String sql = "select * from goods";
-//		Integer[] param = { beginNum, showNum };
+
 		rs = db.executeQuery(sql);
 		try {
 			while (rs.next()) {

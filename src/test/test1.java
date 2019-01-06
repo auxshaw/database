@@ -38,13 +38,13 @@ class test1 {
 //		o1.setGoodsid("1");
 //		o1.setGoodslocation("AÇø1¼Ü1ÅÅ");
 //		System.out.println(((OnsaleDAO) BaseDAO.getAbilityDAO(DAO.OnsaleDAO)).update(o1));
-//		List<Onsale> result = new ArrayList<Onsale>();
-//		result =((OnsaleDAO) BaseDAO.getAbilityDAO(DAO.OnsaleDAO)).queryAll();
-//		Iterator <Onsale> it = result.iterator();
-//		while(it.hasNext()) {
-//			Onsale onsale = it.next();
-//			System.out.println(onsale.getShelfid()+"\t"+onsale.getGoodsid()+"\t"+onsale.getGoodslocation());
-//		}
+		List<Onsale> result = new ArrayList<Onsale>();
+		result =((OnsaleDAO) BaseDAO.getAbilityDAO(DAO.OnsaleDAO)).queryAll();
+		Iterator <Onsale> it = result.iterator();
+		while(it.hasNext()) {
+			Onsale onsale = it.next();
+			System.out.println(onsale.getShelfid()+"\t"+onsale.getGoodsid()+"\t"+onsale.getGoodsname()+"\t"+onsale.getGoodslocation());
+		}
 		
 //		Supply su1=new Supply();
 //		SupplyDAO sy1=new SupplyDAO();
@@ -93,12 +93,11 @@ class test1 {
 //		}
 		
 //		List<Goods> result = new ArrayList<Goods>();
-//		result =((GoodsDAO) BaseDAO.getAbilityDAO(DAO.GoodsDAO)).querybyGoodsname("×Ó");
+//		result =((GoodsDAO) BaseDAO.getAbilityDAO(DAO.GoodsDAO)).querygsh();
 //		Iterator <Goods> it = result.iterator();
 //		while(it.hasNext()) {
 //			Goods goods = it.next();
-//			System.out.println(goods.getGoodsid()+"\t"+goods.getGoodsname()+"\t"+goods.getGoodstype()+"\t"+goods.getPrice()+"\t"
-//					+goods.getProductiondate()+"\t"+goods.getStocksize());
+//			System.out.println(goods.getGoodsid()+"\t"+goods.getGoodsname()+"\t"+goods.getGoodslocation());
 //		}
 		
 //		BigDecimal pri = new BigDecimal("5.00");

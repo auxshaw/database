@@ -5,6 +5,7 @@ public class Onsale {
 	private String shelfid;
 	private String goodsid;
 	private String goodslocation;
+	private String goodsname;
 	
 	//id
 	public String getShelfid() {
@@ -32,4 +33,13 @@ public class Onsale {
 	public void setGoodslocation(String goodslocation) {
 		this.goodslocation = goodslocation;
 	}
+	
+	//name
+		public String getGoodsname() {
+			return goodsname;
+		}
+	 
+		public void setGoodsname(String goodsname) {
+			this.goodsname = goodsname;
+		}
 }

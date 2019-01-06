@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Goods;
 import model.Onsale;
 import model.Supply;
 
@@ -127,13 +128,14 @@ public class OnsaleDAO extends BaseDAO{
 	public List<Onsale> queryAll() {
 		List<Onsale> result = new ArrayList<Onsale>();
 		
-		String sql = "select * from onsale";
+		String sql = "select shelfid,onsale.goodsid,goodsname,goodslocation from goods,onsale where goods.goodsid=onsale.goodsid";
 		rs = db.executeQuery(sql);
 		try {
 			while (rs.next()) {
 				Onsale ons =new Onsale();
 				ons.setShelfid(rs.getString("shelfid"));
 				ons.setGoodsid(rs.getString("goodsid"));
+				ons.setGoodsname(rs.getString("goodsname"));
 				ons.setGoodslocation(rs.getString("goodslocation"));
 				result.add(ons);
 			}
@@ -145,7 +147,7 @@ public class OnsaleDAO extends BaseDAO{
  
 		return result;
 	}
-
+	
 	
 	// query by shelfid, goodsid
 	public int queryBySupply(String shelfid,String goodsid) throws SQLException {

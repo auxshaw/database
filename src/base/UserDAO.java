@@ -18,18 +18,18 @@ public class UserDAO extends BaseDAO{
 		return ad;
 	}
  
-	public boolean queryForLogin(String username, String password) {
+	public boolean queryForLogin(String username, String password,int permission) {
 		boolean result = false;
 		if (username.length() == 0 || password.length() == 0) {
 			return result;
 		}
-		String sql = "select * from user where username=? and password=?";
-		String[] param = { username, password };
+		String sql = "select * from user where username=? and password=? and permission=?";
+		String[] param = { username, password,String.valueOf(permission) };
 		rs = db.executeQuery(sql, param);
 		try {
 			if (rs.next()) {
 				result = true;
-				System.out.println(rs.getString(2));
+				System.out.println(rs.getString(3));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -51,7 +51,7 @@ public class UserDAO extends BaseDAO{
 					return result;
 				}
 				// update
-				String sql = "update goods set password=? where username=?";//**********
+				String sql = "update user set password=? where username=?";//**********
 				String[] param = { user.getPassword(),user.getUsername()};
 				int rowCount = db.executeUpdate(sql, param);
 				if (rowCount == 1) {
@@ -71,7 +71,7 @@ public class UserDAO extends BaseDAO{
 			if (username == null) {
 				return result;
 			}
-			String checkSql = "select * from goods where username=?";
+			String checkSql = "select * from user where username=?";
 			String [] checkParam = { username };
 			rs = db.executeQuery(checkSql, checkParam);
 			if (rs.next()) {
@@ -86,7 +86,7 @@ public class UserDAO extends BaseDAO{
 			if (username == null) {
 				return result;
 			}
-			String checkSql = "select * from goods where username=?";
+			String checkSql = "select * from user where username=?";
 			String [] checkParam = { username };
 			rs = db.executeQuery(checkSql, checkParam);
 			try {

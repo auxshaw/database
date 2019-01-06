@@ -9,6 +9,7 @@ public class Goods {
 	private BigDecimal price;
 	private String productiondate;
 	private int stocksize;
+	private String goodslocation;
 	
 	//id
 	public String getGoodsid() {
@@ -62,5 +63,14 @@ public class Goods {
  
 	public void setStocksize(int stocksize) {
 		this.stocksize = stocksize;
+	}
+	
+	//location
+	public String getGoodslocation() {
+		return goodslocation;
+	}
+	 
+	public void setGoodslocation(String goodslocation) {
+		this.goodslocation = goodslocation;
 	}
 }
