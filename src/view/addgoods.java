@@ -32,27 +32,12 @@ public class addgoods extends JFrame {
 	private static int size1;
 	GoodsDAO godao = new GoodsDAO();
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					addgoods frame = new addgoods();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.
 	 */
 	public addgoods() {
-		setTitle("\u6DFB\u52A0");
+		setTitle("\u6DFB\u52A0\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 346, 378);
 		setLocationRelativeTo(null);

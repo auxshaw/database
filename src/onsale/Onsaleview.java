@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
 import base.OnsaleDAO;
 import model.Onsale;
 import model.Shelf;
+import view.Login;
 
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -32,21 +33,6 @@ public class Onsaleview extends JFrame {
 	private JTextField gid;
 	OnsaleDAO onsdao=new OnsaleDAO();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Onsaleview frame = new Onsaleview();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -164,6 +150,12 @@ public class Onsaleview extends JFrame {
 		JLabel label = new JLabel("\u5546\u54C1\u7F16\u53F7\uFF1A");
 		label.setBounds(50, 16, 72, 15);
 		panel.add(label);
+		
+		if(Login.right==1) {
+			button_update.setVisible(false);
+			button_add.setVisible(false);
+			button_delete.setVisible(false);
+		}
 	}
 
 }

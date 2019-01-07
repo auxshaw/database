@@ -32,21 +32,6 @@ public class Goodsview extends JFrame {
 	private JScrollPane scrollPane;
 	GoodsDAO gdao = new GoodsDAO();
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Goodsview frame = new Goodsview();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.

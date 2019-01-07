@@ -34,27 +34,12 @@ public class Updategoods extends JFrame {
 	GoodsDAO godao = new GoodsDAO();
 	private static int size1;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Updategoods frame = new Updategoods();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
 	public Updategoods() {
-		setTitle("\u4FEE\u6539\u5546\u54C1\u4FE1\u606F");
+		setTitle("\u4FEE\u6539\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 334, 361);
 		setLocationRelativeTo(null);

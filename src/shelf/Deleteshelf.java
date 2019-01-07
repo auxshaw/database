@@ -29,7 +29,7 @@ public class Deleteshelf extends JFrame {
 	 * Create the frame.
 	 */
 	public Deleteshelf() {
-		setTitle("\u5220\u9664\u8D27\u67B6");
+		setTitle("\u5220\u9664\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 371, 219);
 		setLocationRelativeTo(null);

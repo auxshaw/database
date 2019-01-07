@@ -30,7 +30,7 @@ public class Deletegoods extends JFrame {
 	 * Create the frame.
 	 */
 	public Deletegoods() {
-		setTitle("\u5220\u9664");
+		setTitle("\u5220\u9664\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 355, 250);
 		setLocationRelativeTo(null);

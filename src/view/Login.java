@@ -107,6 +107,8 @@ public class Login extends JFrame {
 		password.setBounds(170, 110, 140, 30);
 		contentPane.add(password);
 		
+		right=0;
+				
 		JRadioButton admin = new JRadioButton("\u7BA1\u7406\u5458");
 		admin.setSelected(true);
 		admin.addMouseListener(new MouseAdapter() {

@@ -20,7 +20,7 @@ public class DBUtil {
  
     // 数据库的用户名与密码，需要根据自己的设置
     static final String USER = "root";
-    static final String PASSWORD = "who123";
+    static final String PASSWORD = "root";
 	
 	private DBUtil() {
  

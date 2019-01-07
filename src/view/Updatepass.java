@@ -26,26 +26,12 @@ public class Updatepass extends JFrame {
 	private JTextField username;
 	private JPasswordField password;
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Updatepass frame = new Updatepass();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.
 	 */
 	public Updatepass() {
+		setTitle("\u4FEE\u6539\u5BC6\u7801");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 300, 275);
 		setLocationRelativeTo(null);

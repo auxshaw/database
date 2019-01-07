@@ -33,6 +33,7 @@ public class Updateshelf extends JFrame {
 	 * Create the frame.
 	 */
 	public Updateshelf() {
+		setTitle("\u4FEE\u6539\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 401, 275);
 		setLocationRelativeTo(null);

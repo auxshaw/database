@@ -30,6 +30,7 @@ public class Addsupply extends JFrame {
 	 * Create the frame.
 	 */
 	public Addsupply() {
+		setTitle("\u6DFB\u52A0\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 376, 270);
 		setLocationRelativeTo(null);

@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import base.BaseDAO;
 import base.DAO;
 import base.UserDAO;
+import onsale.Onsaleview;
 import shelf.Shelfview;
 import supplier.Supplierview;
 import supply.Supplyview;
@@ -23,21 +24,21 @@ public class Main extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Main frame = new Main();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Main frame = new Main();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
@@ -70,7 +71,7 @@ public class Main extends JFrame {
 				suview.setVisible(true);
 			}
 		});
-		supplier.setBounds(38, 166, 124, 30);
+		supplier.setBounds(118, 166, 124, 30);
 		contentPane.add(supplier);
 		
 		JButton shelf = new JButton("\u8D27\u67B6\u4FE1\u606F\u8868");
@@ -83,32 +84,24 @@ public class Main extends JFrame {
 		shelf.setBounds(390, 64, 110, 30);
 		contentPane.add(shelf);
 		
-		JButton goodslocation = new JButton("\u5546\u54C1\u4F4D\u7F6E\u8868");
-		goodslocation.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		goodslocation.setBounds(217, 64, 110, 30);
-		contentPane.add(goodslocation);
-		
-		JButton supply = new JButton("\u4F9B\u5E94\u5BF9\u7167\u8868");
+		JButton supply = new JButton("\u4F9B\u5E94\u4FE1\u606F\u8868");
 		supply.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Supplyview supview=new Supplyview();
 				supview.setVisible(true);
 			}
 		});
-		supply.setBounds(217, 166, 110, 30);
+		supply.setBounds(291, 166, 110, 30);
 		contentPane.add(supply);
 		
-		JButton onsale = new JButton("\u4E0A\u67B6\u5BF9\u7167\u8868");
+		JButton onsale = new JButton("\u4E0A\u67B6\u4FE1\u606F\u8868");
 		onsale.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				Onsaleview onsview=new Onsaleview();
+				onsview.setVisible(true);
 			}
 		});
-		onsale.setBounds(390, 166, 110, 30);
+		onsale.setBounds(217, 64, 110, 30);
 		contentPane.add(onsale);
 		
 		JButton updatepassword = new JButton("\u4FEE\u6539\u5BC6\u7801");
@@ -133,7 +126,6 @@ public class Main extends JFrame {
 		if(Login.right==1) {
 			supplier.setVisible(false);
 			supply.setVisible(false);
-			onsale.setVisible(false);
 			updatepassword.setEnabled(false);
 		}
 	}

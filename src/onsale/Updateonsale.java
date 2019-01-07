@@ -28,26 +28,13 @@ public class Updateonsale extends JFrame {
 	private JTextField location;
 	OnsaleDAO onsdao=new OnsaleDAO();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Updateonsale frame = new Updateonsale();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
 	 */
 	public Updateonsale() {
+		setTitle("\u4FEE\u6539\u4FE1\u606F");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 401, 293);
 		setLocationRelativeTo(null);

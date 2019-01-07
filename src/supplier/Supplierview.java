@@ -32,21 +32,6 @@ public class Supplierview extends JFrame {
 	private JTextField textField;
 	SupplierDAO sudao=new SupplierDAO();
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Supplierview frame = new Supplierview();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.
