@@ -103,14 +103,16 @@ public class SupplyDAO extends BaseDAO{
 		if (goodsid == null) {
 			return result;
 		}
-		String checkSql = "select * from supply where goodsid=?";
+		String checkSql = "select supply.goodsid,goodsname,supply.supplierid,suppliername from supply,goods,supplier where supply.goodsid=? and goods.goodsid=supply.goodsid and supplier.supplierid=supply.supplierid";
 		String [] checkParam = { goodsid };
 		rs = db.executeQuery(checkSql, checkParam);
 		try {
 			while (rs.next()) {
 				Supply s =new Supply();
 				s.setGoodsid(rs.getString("goodsid"));
-				s.setSupplierid(rs.getString("supplierid"));	
+				s.setSupplierid(rs.getString("supplierid"));
+				s.setGoodsname(rs.getString("goodsname"));
+				s.setSuppliername(rs.getString("suppliername"));	
 				result.add(s);
 			}
 		} catch (SQLException se) {
@@ -129,14 +131,16 @@ public class SupplyDAO extends BaseDAO{
 		if (supplierid == null) {
 			return result;
 		}
-		String checkSql = "select * from supply where supplierid=?";
+		String checkSql = "select supply.goodsid,goodsname,supply.supplierid,suppliername from supply,goods,supplier where supply.supplierid=? and goods.goodsid=supply.goodsid and supplier.supplierid=supply.supplierid";
 		String [] checkParam = { supplierid };
 		rs = db.executeQuery(checkSql, checkParam);
 		try {
 			while (rs.next()) {
 				Supply s =new Supply();
 				s.setGoodsid(rs.getString("goodsid"));
-				s.setSupplierid(rs.getString("supplierid"));	
+				s.setSupplierid(rs.getString("supplierid"));
+				s.setGoodsname(rs.getString("goodsname"));
+				s.setSuppliername(rs.getString("suppliername"));	
 				result.add(s);
 			}
 		} catch (SQLException se) {
@@ -152,13 +156,15 @@ public class SupplyDAO extends BaseDAO{
 	public List<Supply> queryAll() {
 		List<Supply> result = new ArrayList<Supply>();
 		
-		String sql = "select * from supply";
+		String sql = "select supply.goodsid,goodsname,supply.supplierid,suppliername from supply,goods,supplier where goods.goodsid=supply.goodsid and supplier.supplierid=supply.supplierid";
 		rs = db.executeQuery(sql);
 		try {
 			while (rs.next()) {
 				Supply s =new Supply();
 				s.setGoodsid(rs.getString("goodsid"));
-				s.setSupplierid(rs.getString("supplierid"));	
+				s.setSupplierid(rs.getString("supplierid"));
+				s.setGoodsname(rs.getString("goodsname"));
+				s.setSuppliername(rs.getString("suppliername"));
 				result.add(s);
 			}
 		} catch (SQLException se) {

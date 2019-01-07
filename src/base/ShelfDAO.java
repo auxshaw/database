@@ -95,7 +95,7 @@ public class ShelfDAO extends BaseDAO{
 		return result;
 	}	
 
-	// querybyid
+	// querybysid
 	public List<Shelf> querybyid(String shelfid) {
 		List<Shelf> result = new ArrayList<Shelf>();
 		

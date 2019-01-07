@@ -155,6 +155,61 @@ public class GoodsDAO extends BaseDAO{
 		return result;
 		}
 
+	// query by goodsname
+	public List<Goods> querybyGoodstype(String type) {
+		List<Goods> result = new ArrayList<Goods>();
+		if (type == null) {
+			return result;
+			}	
+		String sql = "select * from goods where goodstype like ?";
+		String [] param = {"%"+ type+"%" };
+		rs = db.executeQuery(sql, param);
+		try {
+			while (rs.next()) {
+				Goods go =new Goods();
+				go.setGoodsid(rs.getString("goodsid"));
+				go.setGoodsname(rs.getString("goodsname"));
+				go.setGoodstype(rs.getString("goodstype"));
+				go.setPrice(rs.getBigDecimal("price"));
+				go.setProductiondate(rs.getString("productiondate"));
+				go.setStocksize(rs.getInt("stocksize"));
+				result.add(go);
+				}
+			} catch (SQLException se) {
+				se.printStackTrace();
+			} finally {
+				destroy();
+			}
+		return result;
+		}
+	
+	// query by stocksize
+	public List<Goods> querybyStocksize(int stocksize) {
+		List<Goods> result = new ArrayList<Goods>();
+	
+		String sql = "select * from goods where stocksize=?";
+		Integer [] param = { stocksize };
+		rs = db.executeQuery(sql, param);
+		try {
+			while (rs.next()) {
+			Goods go =new Goods();
+			go.setGoodsid(rs.getString("goodsid"));
+			go.setGoodsname(rs.getString("goodsname"));
+			go.setGoodstype(rs.getString("goodstype"));
+			go.setPrice(rs.getBigDecimal("price"));
+			go.setProductiondate(rs.getString("productiondate"));
+			go.setStocksize(rs.getInt("stocksize"));
+			result.add(go);
+			}
+			} catch (SQLException se) {
+				se.printStackTrace();
+				} finally {
+					destroy();
+					}
+		return result;
+		}
+	
+
 	// querygoods-shelf
 	public List<Goods> querygsh() {
 		List<Goods> result = new ArrayList<Goods>();

@@ -27,7 +27,7 @@ public class OnsaleDAO extends BaseDAO{
 		}
 		try {
 			// check
-			if (queryBySupply(onsale.getShelfid(),onsale.getGoodsid()) == 0) {
+			if (queryByOnsale(onsale.getShelfid(),onsale.getGoodsid()) == 0) {
 				return result;
 			}
 			// update
@@ -53,7 +53,7 @@ public class OnsaleDAO extends BaseDAO{
 			}
 		try {
 			// check
-			if (queryBySupply(onsale.getShelfid(),onsale.getGoodsid()) == 0) {
+			if (queryByOnsale(onsale.getShelfid(),onsale.getGoodsid()) == 0) {
 				return result;
 			}
 			//delete
@@ -79,7 +79,7 @@ public class OnsaleDAO extends BaseDAO{
 		}
 		try {
 			// check
-			if (queryBySupply(onsale.getShelfid(),onsale.getGoodsid()) == 1) {
+			if (queryByOnsale(onsale.getShelfid(),onsale.getGoodsid()) == 1) {
 				return result;
 			}
 			// insert
@@ -148,9 +148,35 @@ public class OnsaleDAO extends BaseDAO{
 		return result;
 	}
 	
+	// querybygid
+		public List<Onsale> querybygidsid(String shelfid,String goodsid) {
+			List<Onsale> result = new ArrayList<Onsale>();
+			
+			if (goodsid == null) {
+				return result;
+			}
+			String checkSql = "select * from onsale where shelfid=? and goodsid=?";
+			String [] checkParam = { shelfid,goodsid };
+			rs = db.executeQuery(checkSql, checkParam);
+			try {
+				while (rs.next()) {
+					Onsale ons =new Onsale();
+					ons.setShelfid(rs.getString("shelfid"));
+					ons.setGoodsid(rs.getString("goodsid"));
+					ons.setGoodslocation(rs.getString("goodslocation"));
+					result.add(ons);
+				}
+			} catch (SQLException se) {
+				se.printStackTrace();
+			} finally {
+				destroy();
+			}
+	 
+			return result;
+		}
 	
 	// query by shelfid, goodsid
-	public int queryBySupply(String shelfid,String goodsid) throws SQLException {
+	public int queryByOnsale(String shelfid,String goodsid) throws SQLException {
 		int result = 0;
 		if (shelfid == null||goodsid==null) {
 			return result;
